@@ -1615,7 +1615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8836186197282402207, guid: 9e9777ca1951f7540b7591e34177a02e, type: 3}
       propertyPath: m_Name
-      value: ciudad (1)
+      value: ciudad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
