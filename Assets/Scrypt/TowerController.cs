@@ -123,7 +123,7 @@ public class TowerController : MonoBehaviour
         {
             if (collider.gameObject.CompareTag("Enemy"))
             {
-                EnemyController enemyController = collider.GetComponent<EnemyController>();
+                Enemigodiego enemyController = collider.GetComponent<Enemigodiego>();
                 if (enemyController != null)
                 {
                     bool wasInsideRange = enemyController.isSlowed; // Check if the enemy was previously inside the range
@@ -134,17 +134,17 @@ public class TowerController : MonoBehaviour
                         if (!enemyController.isSlowed)
                         {
                             // Enemy is within the attack range and not already slowed
-                            enemyController.moveSpeed -= iceVariables.iceSlowRate;
+                            enemyController.speed -= iceVariables.iceSlowRate;
                             enemyController.isSlowed = true;
-                            Debug.Log("Slowed: " + enemyController.moveSpeed);
+                            Debug.Log("Slowed: " + enemyController.speed);
                         }
                     }
                     else if (wasInsideRange)
                     {
                         // Enemy was inside the attack range but now outside, increase its speed
-                        enemyController.moveSpeed += iceVariables.iceSlowRate;
+                        enemyController.speed += iceVariables.iceSlowRate;
                         enemyController.isSlowed = false; // Reset the slow status
-                        Debug.Log("Speed increased: " + enemyController.moveSpeed);
+                        Debug.Log("Speed increased: " + enemyController.speed);
                     }
                 }
             }

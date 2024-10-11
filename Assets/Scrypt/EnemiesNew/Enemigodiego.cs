@@ -7,6 +7,8 @@ public class Enemigodiego : MonoBehaviour
     public float speed = 1f;
     private Transform target;
     private int wavepointIndex = 0;
+    public bool isSlowed;
+
     void Start () 
     {
         target = waypoints.points[0];
