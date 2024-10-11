@@ -119,6 +119,7 @@ public class TowerController : MonoBehaviour
     public void Ice()
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, attackRange);
+        iceVariables.iceSlowRate = 0.4f;
         foreach (Collider2D collider in colliders)
         {
             if (collider.gameObject.CompareTag("Enemy"))

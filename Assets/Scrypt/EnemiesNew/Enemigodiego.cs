@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemigodiego : MonoBehaviour
 {
-    public float speed = 1f;
+    public float speed = 20f;
     private Transform target;
     private int wavepointIndex = 0;
     public bool isSlowed;
