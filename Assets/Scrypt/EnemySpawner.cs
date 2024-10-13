@@ -1,28 +1,34 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    // Prefab del enemigo a spawnear
     public GameObject enemyPrefab;
-
-    // Puntos de spawn (asignados en el Inspector)
     public Transform[] spawnPoints;
-
-    // Configuración de las oleadas
-    public int initialEnemyCount = 3;   // Número de enemigos en la primera oleada
-    public float timeBetweenWaves = 5f; // Tiempo entre oleadas
-    public float timeBetweenSpawns = 1f; // Tiempo entre spawneos dentro de una oleada
-    private int currentWave = 0; // Contador de la oleada actual
-
-    // Radio aleatorio alrededor del spawn point
-    public float spawnRadius = 2.0f; // Define el radio para randomizar la posición
+    public int initialEnemyCount = 3;
+    public float timeBetweenWaves = 5f;
+    public float timeBetweenSpawns = 1f;
+    private int currentWave = 0;
+    public float spawnRadius = 2.0f;
     private bool isSpawning = false;
+
+    // Diccionario para mapear puntos de spawn a nombres de caminos
+    public Dictionary<Transform, string> spawnPointToPathMap;
 
     void Start()
     {
-        // Comenzar el ciclo de oleadas
         isSpawning = false;
+
+        // Inicializar el diccionario de mapeo
+        spawnPointToPathMap = new Dictionary<Transform, string>
+        {
+            { spawnPoints[0], "Waypoints1" },
+            { spawnPoints[1], "Waypoints2" },
+            { spawnPoints[2], "Waypoints3" },
+            { spawnPoints[3], "Waypoints4" }
+            // Agrega más mapeos según sea necesario
+        };
     }
 
     public void StartWaves()
@@ -34,47 +40,46 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    // Coroutine que maneja el spawneo de oleadas
     IEnumerator SpawnWaves()
     {
-        // Bucle infinito para las oleadas
         while (true)
         {
-            // Incrementar número de enemigos por cada oleada
             currentWave++;
             int enemiesToSpawn = initialEnemyCount + currentWave;
 
-            // Spawnear enemigos de forma progresiva
             for (int i = 0; i < enemiesToSpawn; i++)
             {
                 SpawnEnemy();
-
-                // Esperar un tiempo antes de spawnear el siguiente enemigo
                 yield return new WaitForSeconds(timeBetweenSpawns);
             }
 
-            // Esperar antes de la siguiente oleada
             yield return new WaitForSeconds(timeBetweenWaves);
         }
     }
 
-    // Método para spawnear un enemigo en uno de los puntos aleatorios
     void SpawnEnemy()
     {
         if (enemyPrefab != null && spawnPoints.Length > 0)
         {
-            // Seleccionar un punto de spawn aleatorio
             Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-
-            // Crear una posición aleatoria dentro del radio alrededor del punto de spawn
             Vector3 randomOffset = Random.insideUnitSphere * spawnRadius;
-            randomOffset.y = 0; // Asegurarse de que no se mueva en el eje Y (plano)
-
-            // Determinar la posición final del enemigo
+            randomOffset.y = 0;
             Vector3 spawnPosition = spawnPoint.position + randomOffset;
 
-            // Instanciar el enemigo en la posición randomizada del punto de spawn
-            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+
+            Enemigodiego enemyScript = enemy.GetComponent<Enemigodiego>();
+            if (enemyScript != null)
+            {
+                if (spawnPointToPathMap.TryGetValue(spawnPoint, out string pathName))
+                {
+                    enemyScript.pathName = pathName;
+                }
+                else
+                {
+                    Debug.LogWarning("No se encontró un camino para el punto de spawn: " + spawnPoint.name);
+                }
+            }
         }
         else
         {

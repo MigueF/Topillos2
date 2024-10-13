@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Enemigodiego : MonoBehaviour
 {
@@ -8,17 +9,27 @@ public class Enemigodiego : MonoBehaviour
     private Transform target;
     private int wavepointIndex = 0;
     public bool isSlowed;
-    
+    private Transform[] currentPath;
+
+    public string pathName;
 
     void Start () 
     {
+        if (waypoints.paths.TryGetValue(pathName, out currentPath))
+        {
+            target = currentPath[0];
+        }
+        else
+        {
+            Debug.LogError("Path not found: " + pathName);
+        }
 
-
-        target = waypoints.points[0];
+       
         
     }
     void Update() 
     {
+        if (currentPath == null) return;
 
         Vector3 dir = target.position - transform.position;
 
@@ -31,14 +42,17 @@ public class Enemigodiego : MonoBehaviour
     }
     void GetNextWaypoint()
     {
-        if (wavepointIndex >= waypoints.points.Length - 1)
+        if (wavepointIndex >= currentPath.Length - 1)
         {
             GameManager.instance.ReduceLives(1);
             Destroy(gameObject);
             
         }
-        wavepointIndex++;
-        target = waypoints.points[wavepointIndex];
+        else
+        {
+            wavepointIndex++;
+            target = currentPath[wavepointIndex];
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {

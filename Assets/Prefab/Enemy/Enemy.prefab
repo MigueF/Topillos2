@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   isSlowed: 0
+  pathName: Waypoints2
 --- !u!50 &-1516659592296355413
 Rigidbody2D:
   serializedVersion: 4
