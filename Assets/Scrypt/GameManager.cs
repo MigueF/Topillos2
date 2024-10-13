@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int vidas = 3;
     public TextMeshProUGUI Vidastext;
+
     private void Awake()
     {
         if (instance == null)
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     private void Start()
     {
         Cambiartextovidas();
