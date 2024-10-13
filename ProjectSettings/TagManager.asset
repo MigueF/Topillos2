@@ -8,11 +8,12 @@ TagManager:
   - SwordMan
   - Castle
   - Manager
+  - Tiles
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Tiles
   - Water
   - UI
   - Tower
