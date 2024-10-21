@@ -1,5 +1,6 @@
 using UnityEngine;
-using TMPro;    
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,8 +31,7 @@ public class GameManager : MonoBehaviour
 
         if (vidas <= 0)
         {
-            // Lógica para manejar la derrota del jugador
-            Debug.Log("Game Over");
+            SceneManager.LoadScene("Juego");
         }
     }
     void Cambiartextovidas()
