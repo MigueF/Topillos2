@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
 
         if (vidas <= 0)
         {
-            SceneManager.LoadScene("Juego");
+           // SceneManager.LoadScene("MainMenu");
+           Application.Quit();
         }
     }
     void Cambiartextovidas()
