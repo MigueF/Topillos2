@@ -7324,16 +7324,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43001dbd719f53f499d4591ee0763a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8919154352166584542, guid: f9b2c1e5ba4286d499336e6027c4f431, type: 3}
+  enemyPrefabs: []
   spawnPoints:
   - {fileID: 1300842287}
   - {fileID: 490337102}
   - {fileID: 999852399}
   - {fileID: 43100233}
-  initialEnemyCount: 3
+  waves: []
   timeBetweenWaves: 5
   timeBetweenSpawns: 1
-  spawnRadius: 0
 --- !u!1 &832110007
 GameObject:
   m_ObjectHideFlags: 0
@@ -8115,7 +8114,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 795652984}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
         m_MethodName: StartWaves
         m_Mode: 1
