@@ -8,6 +8,7 @@ public class EnemyWave
     public int enemyType;         // Índice del tipo de enemigo (en la lista de prefabs)
     public int spawnPointIndex;   // Índice del punto de spawn (en la lista de spawners)
     public int enemyCount;        // Cantidad de enemigos de este tipo
+    public string pathName;       // Nombre del camino que deben seguir los enemigos
 }
 
 [System.Serializable]
@@ -53,7 +54,7 @@ public class EnemyWaveSpawner : MonoBehaviour
                 // Spawnear la cantidad de enemigos especificada de este tipo
                 for (int i = 0; i < enemyWave.enemyCount; i++)
                 {
-                    SpawnEnemy(enemyWave.enemyType, enemyWave.spawnPointIndex);
+                    SpawnEnemy(enemyWave.enemyType, enemyWave.spawnPointIndex, enemyWave.pathName);
 
                     // Esperar antes de spawnear el siguiente enemigo del grupo
                     yield return new WaitForSeconds(timeBetweenSpawns);
@@ -67,13 +68,27 @@ public class EnemyWaveSpawner : MonoBehaviour
     }
 
     // Método para spawnear un enemigo de un tipo específico en un punto específico
-    void SpawnEnemy(int enemyType, int spawnPointIndex)
+    void SpawnEnemy(int enemyType, int spawnPointIndex, string pathName)
     {
         // Verificar que el tipo de enemigo y el punto de spawn sean válidos
         if (enemyType >= 0 && enemyType < enemyPrefabs.Length && spawnPointIndex >= 0 && spawnPointIndex < spawnPoints.Length)
         {
             // Instanciar el enemigo en el punto de spawn seleccionado
-            Instantiate(enemyPrefabs[enemyType], spawnPoints[spawnPointIndex].position, Quaternion.identity);
+            GameObject enemy = Instantiate(enemyPrefabs[enemyType], spawnPoints[spawnPointIndex].position, Quaternion.identity);
+
+            // Asignar los waypoints al enemigo
+            Enemigodiego enemyMovement = enemy.GetComponent<Enemigodiego>();
+            if (enemyMovement != null)
+            {
+                if (waypoints.paths.TryGetValue(pathName, out Transform[] path))
+                {
+                    enemyMovement.SetWaypoints(path);
+                }
+                else
+                {
+                    Debug.LogError("Path not found: " + pathName);
+                }
+            }
         }
         else
         {

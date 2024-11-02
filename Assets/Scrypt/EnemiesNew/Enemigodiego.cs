@@ -63,7 +63,15 @@ public class Enemigodiego : MonoBehaviour
             
         }
     }
-   
+    public void SetWaypoints(Transform[] waypoints)
+    {
+        currentPath = waypoints;
+        if (currentPath != null && currentPath.Length > 0)
+        {
+            target = currentPath[0];
+        }
+    }
+
 }
 
 
