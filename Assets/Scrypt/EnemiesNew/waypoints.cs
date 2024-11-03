@@ -18,6 +18,7 @@ public class waypoints : MonoBehaviour
                 points[i] = path.GetChild(i);
             }
             paths.Add(path.name, points);
+            Debug.Log("Path added: " + path.name + " with " + points.Length + " points.");
         }
     }
 }   

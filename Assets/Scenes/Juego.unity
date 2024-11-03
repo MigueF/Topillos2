@@ -7332,12 +7332,22 @@ MonoBehaviour:
   - {fileID: 490337102}
   - {fileID: 999852399}
   - {fileID: 43100233}
+  waypointParents:
+  - {fileID: 1973478382}
+  - {fileID: 1660939579}
+  - {fileID: 1914813507}
+  - {fileID: 2110824778}
   waves:
   - enemiesInWave:
     - enemyType: 0
-      spawnPointIndex: 2
+      spawnPointIndex: 3
       enemyCount: 3
-      pathName: Waypoints2
+      pathName: Waypoints4
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 0
+      enemyCount: 2
+      pathName: Waypoints1
   timeBetweenWaves: 5
   timeBetweenSpawns: 1
 --- !u!1 &832110007
@@ -37031,7 +37041,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973478382}
-  - component: {fileID: 1973478381}
   m_Layer: 0
   m_Name: Waypoints1
   m_TagString: Untagged
@@ -37039,18 +37048,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1973478381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973478380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 429e1745762e16f49bf743237c825302, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1973478382
 Transform:
   m_ObjectHideFlags: 0

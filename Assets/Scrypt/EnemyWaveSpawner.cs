@@ -25,6 +25,12 @@ public class EnemyWaveSpawner : MonoBehaviour
     // Puntos de spawn (definidos en el Inspector)
     public Transform[] spawnPoints;
 
+    // Caminos (definidos en el Inspector)
+    public Transform[] waypointParents;
+
+    // Diccionario para almacenar los caminos
+    private Dictionary<string, Transform[]> waypoints = new Dictionary<string, Transform[]>();
+
     // Lista de oleadas
     public List<WaveConfig> waves;
 
@@ -36,8 +42,25 @@ public class EnemyWaveSpawner : MonoBehaviour
 
     void Start()
     {
+        // Inicializar los caminos
+        InitializeWaypoints();
+
         // Comenzar la secuencia de oleadas
         StartCoroutine(SpawnWaves());
+    }
+
+    // Método para inicializar los caminos
+    void InitializeWaypoints()
+    {
+        foreach (Transform parent in waypointParents)
+        {
+            Transform[] path = new Transform[parent.childCount];
+            for (int i = 0; i < parent.childCount; i++)
+            {
+                path[i] = parent.GetChild(i);
+            }
+            waypoints[parent.name] = path;
+        }
     }
 
     // Coroutine para manejar el ciclo de oleadas
@@ -70,19 +93,18 @@ public class EnemyWaveSpawner : MonoBehaviour
     // Método para spawnear un enemigo de un tipo específico en un punto específico
     void SpawnEnemy(int enemyType, int spawnPointIndex, string pathName)
     {
-        // Verificar que el tipo de enemigo y el punto de spawn sean válidos
+        Debug.Log($"Intentando spawnear enemigo de tipo {enemyType} en el punto de spawn {spawnPointIndex} con el camino {pathName}");
+
         if (enemyType >= 0 && enemyType < enemyPrefabs.Length && spawnPointIndex >= 0 && spawnPointIndex < spawnPoints.Length)
         {
-            // Instanciar el enemigo en el punto de spawn seleccionado
             GameObject enemy = Instantiate(enemyPrefabs[enemyType], spawnPoints[spawnPointIndex].position, Quaternion.identity);
-
-            // Asignar los waypoints al enemigo
             Enemigodiego enemyMovement = enemy.GetComponent<Enemigodiego>();
             if (enemyMovement != null)
             {
-                if (waypoints.paths.TryGetValue(pathName, out Transform[] path))
+                if (waypoints.TryGetValue(pathName, out Transform[] path))
                 {
                     enemyMovement.SetWaypoints(path);
+                    Debug.Log("Waypoints asignados al enemigo: " + pathName);
                 }
                 else
                 {

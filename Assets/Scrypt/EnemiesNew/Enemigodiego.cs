@@ -11,28 +11,11 @@ public class Enemigodiego : MonoBehaviour
     public bool isSlowed;
     private Transform[] currentPath;
 
-    public string pathName;
-
-    void Start () 
-    {
-        if (waypoints.paths.TryGetValue(pathName, out currentPath))
-        {
-            target = currentPath[0];
-        }
-        else
-        {
-            Debug.LogError("Path not found: " + pathName);
-        }
-
-       
-        
-    }
-    void Update() 
+    void Update()
     {
         if (currentPath == null) return;
 
         Vector3 dir = target.position - transform.position;
-
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
         if (Vector3.Distance(transform.position, target.position) <= 0.2f)
@@ -40,40 +23,39 @@ public class Enemigodiego : MonoBehaviour
             GetNextWaypoint();
         }
     }
+
     void GetNextWaypoint()
     {
         if (wavepointIndex >= currentPath.Length - 1)
         {
             GameManager.instance.ReduceLives(1);
             Destroy(gameObject);
-            
         }
         else
         {
             wavepointIndex++;
             target = currentPath[wavepointIndex];
+            Debug.Log("Next waypoint: " + target.position);
         }
     }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Base"))
         {
             GameManager.instance.ReduceLives(1);
             Destroy(gameObject);
-            
         }
     }
+
     public void SetWaypoints(Transform[] waypoints)
     {
         currentPath = waypoints;
+        wavepointIndex = 0; // Reiniciar el índice de waypoints
         if (currentPath != null && currentPath.Length > 0)
         {
             target = currentPath[0];
+            Debug.Log("Waypoints set for enemy.");
         }
     }
-
 }
-
-
-
-
