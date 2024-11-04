@@ -194,7 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 43100233}
   m_Layer: 0
-  m_Name: Spawner4
+  m_Name: SpawnerS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -812,7 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490337102}
   m_Layer: 0
-  m_Name: Spawner2
+  m_Name: SpawnerO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7326,7 +7326,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefabs:
   - {fileID: 8919154352166584542, guid: f9b2c1e5ba4286d499336e6027c4f431, type: 3}
+  - {fileID: 244080177328306800, guid: 267975973ad40134b9cf255b409ec2dc, type: 3}
+  - {fileID: 9102859072561685265, guid: fc4dbb1764211364f84bcc9be46e9dac, type: 3}
+  - {fileID: 938705037939925126, guid: 3523a64cdf71196489e0d2ff977ecf80, type: 3}
   - {fileID: 8095145041545277252, guid: ac8f19d973211e84ca25845af1b2fafd, type: 3}
+  - {fileID: 3992056797558029935, guid: 2ea65f1c9e6dfbd4eac1520df2f04342, type: 3}
   spawnPoints:
   - {fileID: 1300842287}
   - {fileID: 490337102}
@@ -7339,15 +7343,24 @@ MonoBehaviour:
   - {fileID: 2110824778}
   waves:
   - enemiesInWave:
-    - enemyType: 1
-      spawnPointIndex: 3
-      enemyCount: 3
-      pathName: Waypoints4
-  - enemiesInWave:
     - enemyType: 0
       spawnPointIndex: 0
-      enemyCount: 2
+      enemyCount: 3
       pathName: Waypoints1
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 2
+      enemyCount: 7
+      pathName: Waypoints3
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 2
+      enemyCount: 5
+      pathName: Waypoints3
+    - enemyType: 1
+      spawnPointIndex: 2
+      enemyCount: 2
+      pathName: Waypoints3
   timeBetweenWaves: 5
   timeBetweenSpawns: 1
 --- !u!1 &832110007
@@ -8236,7 +8249,7 @@ GameObject:
   m_Component:
   - component: {fileID: 999852399}
   m_Layer: 0
-  m_Name: Spawner3
+  m_Name: SpawnerE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8998,7 +9011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300842287}
   m_Layer: 0
-  m_Name: Spawner1
+  m_Name: SpawnerN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
