@@ -7416,13 +7416,107 @@ MonoBehaviour:
       pathName: Waypoints3
     - enemyType: 1
       spawnPointIndex: 2
-      enemyCount: 2
+      enemyCount: 1
       pathName: Waypoints3
+  - enemiesInWave:
+    - enemyType: 1
+      spawnPointIndex: 3
+      enemyCount: 3
+      pathName: Waypoints4
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 3
+      enemyCount: 10
+      pathName: Waypoints4
+    - enemyType: 1
+      spawnPointIndex: 3
+      enemyCount: 3
+      pathName: Waypoints4
+  - enemiesInWave:
+    - enemyType: 2
+      spawnPointIndex: 1
+      enemyCount: 5
+      pathName: Waypoints2
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 0
+      enemyCount: 5
+      pathName: Waypoints1
+    - enemyType: 1
+      spawnPointIndex: 1
+      enemyCount: 3
+      pathName: Waypoints2
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 0
+      enemyCount: 8
+      pathName: Waypoints1
+    - enemyType: 0
+      spawnPointIndex: 2
+      enemyCount: 8
+      pathName: Waypoints3
+    - enemyType: 0
+      spawnPointIndex: 3
+      enemyCount: 8
+      pathName: Waypoints4
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 3
+      enemyCount: 10
+      pathName: Waypoints4
+    - enemyType: 1
+      spawnPointIndex: 3
+      enemyCount: 3
+      pathName: Waypoints4
+    - enemyType: 2
+      spawnPointIndex: 3
+      enemyCount: 4
+      pathName: Waypoints4
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 3
+      enemyCount: 20
+      pathName: Waypoints4
+    - enemyType: 1
+      spawnPointIndex: 3
+      enemyCount: 6
+      pathName: Waypoints4
+    - enemyType: 2
+      spawnPointIndex: 3
+      enemyCount: 8
+      pathName: Waypoints4
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 1
+      enemyCount: 24
+      pathName: Waypoints2
+  - enemiesInWave:
+    - enemyType: 2
+      spawnPointIndex: 0
+      enemyCount: 6
+      pathName: Waypoints1
+    - enemyType: 0
+      spawnPointIndex: 1
+      enemyCount: 15
+      pathName: Waypoints2
+  - enemiesInWave:
+    - enemyType: 1
+      spawnPointIndex: 0
+      enemyCount: 6
+      pathName: Waypoints1
+    - enemyType: 1
+      spawnPointIndex: 1
+      enemyCount: 6
+      pathName: Waypoints2
   - enemiesInWave:
     - enemyType: 0
       spawnPointIndex: 2
-      enemyCount: 5
+      enemyCount: 15
       pathName: Waypoints3
+    - enemyType: 1
+      spawnPointIndex: 3
+      enemyCount: 9
+      pathName: Waypoints4
   timeBetweenWaves: 5
   timeBetweenSpawns: 1
 --- !u!1 &832110007
