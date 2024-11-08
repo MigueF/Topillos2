@@ -694,6 +694,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &377219327
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.7230048
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9219742
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610511688901078860, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_Name
+      value: Defender Archer Tower (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
 --- !u!1001 &388073228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7360,6 +7417,11 @@ MonoBehaviour:
     - enemyType: 1
       spawnPointIndex: 2
       enemyCount: 2
+      pathName: Waypoints3
+  - enemiesInWave:
+    - enemyType: 0
+      spawnPointIndex: 2
+      enemyCount: 5
       pathName: Waypoints3
   timeBetweenWaves: 5
   timeBetweenSpawns: 1
@@ -35863,6 +35925,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1660939579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1421315508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.0575266
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6571553
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2689890949509351164, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8610511688901078860, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
+      propertyPath: m_Name
+      value: Defender Archer Tower (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fed0643f594364f4a8892e69d25d33da, type: 3}
 --- !u!1001 &1484239861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37601,3 +37720,5 @@ SceneRoots:
   - {fileID: 999002277}
   - {fileID: 1962525936}
   - {fileID: 330515980}
+  - {fileID: 1421315508}
+  - {fileID: 377219327}
