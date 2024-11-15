@@ -14,9 +14,11 @@ public class TowerUpgradeManager : MonoBehaviour
     public TextMeshProUGUI upgradePrizeText;
     public TextMeshProUGUI sellPrizeText;
     private TowerController towerController;
-    private int currentLevel;
+    private Animator towerAnimator; // Referencia al Animator de la torre
+    public int currentLevel;
     private int currentUpgradePrize;
     private int currentsellPrize;
+
     void Start()
     {
         upgradeCanvas.SetActive(false);
@@ -27,6 +29,9 @@ public class TowerUpgradeManager : MonoBehaviour
         upgradePrizeText.text = "Prize: " + currentUpgradePrize.ToString();
         sellPrizeText.text = "Prize: " + currentsellPrize.ToString();
         towerController = gameObject.GetComponent<TowerController>();
+        towerAnimator = gameObject.GetComponent<Animator>(); // Obtener el componente Animator
+        UpdateTowerAnimation(); // Actualizar la animación inicial
+
         if (touchButton != null)
         {
             touchButton.onClick.RemoveAllListeners();
@@ -37,12 +42,13 @@ public class TowerUpgradeManager : MonoBehaviour
             upgradeButton.onClick.RemoveAllListeners();
             upgradeButton.onClick.AddListener(Upgrade);
         }
-        if(sellButton != null)
+        if (sellButton != null)
         {
             sellButton.onClick.RemoveAllListeners();
             sellButton.onClick.AddListener(Sell);
         }
     }
+
     private void Update()
     {
         if (upgradePrizeText != null)
@@ -59,9 +65,18 @@ public class TowerUpgradeManager : MonoBehaviour
             }
         }
     }
+
+    private void UpdateTowerAnimation()
+    {
+        if (towerAnimator != null)
+        {
+            towerAnimator.SetInteger("Level", currentLevel); // Asignar el nivel actual al parámetro "Level" del Animator
+        }
+    }
+
     public void Upgrade()
     {
-        if (towerController != null && currentLevel < 5)
+        if (towerController != null && currentLevel < 3)
         {
             if (CoinManager.instance.SpendCoins(currentUpgradePrize))
             {
@@ -80,6 +95,7 @@ public class TowerUpgradeManager : MonoBehaviour
                 towerController.RangeCircle();
 
                 currentLevel += 1;
+                UpdateTowerAnimation(); // Actualizar la animación después de la mejora
 
                 currentUpgradePrize += CoinManager.instance.upgradePlusPrize;
                 currentsellPrize += CoinManager.instance.sellPlusPrize;
@@ -87,7 +103,7 @@ public class TowerUpgradeManager : MonoBehaviour
                 sellPrizeText.text = "Prize: " + currentsellPrize.ToString();
 
                 levelText.text = "Level: " + currentLevel.ToString();
-                if (currentLevel >= 5)
+                if (currentLevel >= 3)
                 {
                     levelText.text = "Max: " + currentLevel.ToString();
                 }
@@ -99,12 +115,14 @@ public class TowerUpgradeManager : MonoBehaviour
             }
         }
     }
+
     public void Sell()
     {
-        CoinManager.instance.AddCoins(currentsellPrize);       
+        CoinManager.instance.AddCoins(currentsellPrize);
         sellPrizeText.text = "Prize: " + currentsellPrize.ToString();
         Destroy(gameObject);
     }
+
     public void Touch()
     {
         upgradeCanvas.SetActive(true);
@@ -115,6 +133,7 @@ public class TowerUpgradeManager : MonoBehaviour
             touchButton.onClick.AddListener(Close);
         }
     }
+
     public void Close()
     {
         upgradeCanvas.SetActive(false);

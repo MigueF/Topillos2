@@ -1239,6 +1239,7 @@ GameObject:
   - component: {fileID: 5290327094983917911}
   - component: {fileID: 4507899358515508397}
   - component: {fileID: 6049542958108514082}
+  - component: {fileID: 6647409920536763097}
   m_Layer: 0
   m_Name: Ice Tower
   m_TagString: Untagged
@@ -1256,8 +1257,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.64, y: 0.35, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6759888778759240724}
   - {fileID: 2584927848107064944}
@@ -1424,6 +1425,28 @@ MonoBehaviour:
   levelText: {fileID: 2910697603766687916}
   upgradePrizeText: {fileID: 295073680295313349}
   sellPrizeText: {fileID: 5764828356849062317}
+  currentLevel: 0
+--- !u!95 &6647409920536763097
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6612628867598983466}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ccfc96ed52c59904abf6ecae2e13e7a0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6719439562945615748
 GameObject:
   m_ObjectHideFlags: 0

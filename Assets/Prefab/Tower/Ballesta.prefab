@@ -1952,6 +1952,7 @@ GameObject:
   - component: {fileID: 4220323184291209190}
   - component: {fileID: 3278254343028681706}
   - component: {fileID: 945652624579593530}
+  - component: {fileID: 3288285763694163487}
   m_Layer: 0
   m_Name: Ballesta
   m_TagString: Untagged
@@ -2137,6 +2138,28 @@ MonoBehaviour:
   levelText: {fileID: 3616538552386160663}
   upgradePrizeText: {fileID: 390215410220967456}
   sellPrizeText: {fileID: 2819320982328225570}
+  currentLevel: 0
+--- !u!95 &3288285763694163487
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8544355937075581708}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 158a9cd53ce62bf47aca109a5a216974, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9043578941606700214
 GameObject:
   m_ObjectHideFlags: 0
