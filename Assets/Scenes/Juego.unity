@@ -1272,7 +1272,6 @@ GameObject:
   - component: {fileID: 503680809}
   - component: {fileID: 503680808}
   - component: {fileID: 503680811}
-  - component: {fileID: 503680812}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Manager
@@ -1334,21 +1333,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidas: 20
   Vidastext: {fileID: 1703300261}
---- !u!114 &503680812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 503680807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75b49c3a34461f643b37c712919c2b40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Buttons: {fileID: 734182802}
-  activo: 0
-  alreadyExecuted: 0
 --- !u!1001 &506748366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7856,7 +7840,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Buttons: {fileID: 346436190}
   activo: 0
-  alreadyExecuted: 0
+  cartascheck: 0
+  Activarcartas: {fileID: 1826777724}
 --- !u!4 &734182805
 Transform:
   m_ObjectHideFlags: 0
