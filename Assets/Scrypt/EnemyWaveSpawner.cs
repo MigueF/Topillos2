@@ -38,7 +38,7 @@ public class EnemyWaveSpawner : MonoBehaviour
     public float timeBetweenWaves = 5f;   // Tiempo entre oleadas
     public float timeBetweenSpawns = 1f;  // Tiempo entre spawns de enemigos dentro de una oleada
 
-    public static int currentWaveIndex = 0;     // Índice de la oleada actual
+    public int currentWaveIndex = 0;     // Índice de la oleada actual
 
     void Start()
     {

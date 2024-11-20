@@ -64,6 +64,7 @@ public class TowerController : MonoBehaviour
             }
         }
         Ability();
+        RotateTowardsTarget();
     }
 
     void Shoot(GameObject target)
@@ -231,5 +232,16 @@ public class TowerController : MonoBehaviour
             rangeCircle = transform.GetChild(3).gameObject;
             return;
         }
+    }
+    void RotateTowardsTarget()
+    {
+        if (target == null)
+            return;
+
+        Vector3 direction = target.transform.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float offset = -90f; // Ajusta este valor según la orientación inicial de tu torreta
+        Quaternion rotation = Quaternion.AngleAxis(angle + offset, Vector3.forward);
+        transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 5f);
     }
 }
