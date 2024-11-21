@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TileDiagonal_34 1
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 1668826326, guid: c9cb713882cf8c547892b5e21cae35cd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.70572, g: 0.9811321, b: 0.6062656, a: 1}
   m_Transform:
     e00: 1
     e01: 0
