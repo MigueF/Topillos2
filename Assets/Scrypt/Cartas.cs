@@ -7,7 +7,6 @@ public class Cartas : MonoBehaviour
     public GameObject Buttons;
     public bool activo;
     public bool cartascheck;
-    bool solounavez;
     public GameObject Activarcartas;
     
 
@@ -18,8 +17,6 @@ public class Cartas : MonoBehaviour
         activo = false;
         Buttons.SetActive(activo);
         cartascheck = false;
-        solounavez = false;
-
     }
 
     
