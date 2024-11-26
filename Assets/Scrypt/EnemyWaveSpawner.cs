@@ -9,6 +9,7 @@ public class EnemyWave
     public int spawnPointIndex;   // Índice del punto de spawn (en la lista de spawners)
     public int enemyCount;        // Cantidad de enemigos de este tipo
     public string pathName;       // Nombre del camino que deben seguir los enemigos
+    
 }
 
 [System.Serializable]
@@ -19,6 +20,7 @@ public class WaveConfig
 
 public class EnemyWaveSpawner : MonoBehaviour
 {
+    public GameObject startwave;
     // Prefabs de los diferentes tipos de enemigos
     public GameObject[] enemyPrefabs;
 
@@ -44,9 +46,6 @@ public class EnemyWaveSpawner : MonoBehaviour
     {
         // Inicializar los caminos
         InitializeWaypoints();
-
-        // Comenzar la secuencia de oleadas
-        StartCoroutine(SpawnWaves());
     }
 
     // Método para inicializar los caminos
@@ -61,6 +60,13 @@ public class EnemyWaveSpawner : MonoBehaviour
             }
             waypoints[parent.name] = path;
         }
+    }
+
+    // Método público para iniciar las oleadas
+    public void StartWaves()
+    {
+        StartCoroutine(SpawnWaves());
+        startwave.SetActive(false);
     }
 
     // Coroutine para manejar el ciclo de oleadas

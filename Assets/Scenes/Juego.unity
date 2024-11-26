@@ -8247,6 +8247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43001dbd719f53f499d4591ee0763a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startwave: {fileID: 998079403}
   enemyPrefabs:
   - {fileID: 8919154352166584542, guid: f9b2c1e5ba4286d499336e6027c4f431, type: 3}
   - {fileID: 244080177328306800, guid: 267975973ad40134b9cf255b409ec2dc, type: 3}
@@ -8386,6 +8387,63 @@ MonoBehaviour:
   timeBetweenWaves: 7
   timeBetweenSpawns: 1
   currentWaveIndex: 0
+--- !u!1001 &812344258
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5985076998558886460, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_Name
+      value: MINA 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.711732
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -11.03148
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
 --- !u!1 &832110007
 GameObject:
   m_ObjectHideFlags: 0
@@ -9278,8 +9336,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
+      - m_Target: {fileID: 795652984}
+        m_TargetAssemblyTypeName: EnemyWaveSpawner, Assembly-CSharp
         m_MethodName: StartWaves
         m_Mode: 1
         m_Arguments:
@@ -40497,11 +40555,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.59
+      value: -7.21
       objectReference: {fileID: 0}
     - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.97
+      value: -10.9
       objectReference: {fileID: 0}
     - target: {fileID: 7745469779843352140, guid: 3ebadf7adedd5f8478809ad1ec054910, type: 3}
       propertyPath: m_LocalPosition.z
@@ -40627,3 +40685,4 @@ SceneRoots:
   - {fileID: 6323275576583897114}
   - {fileID: 1601561476}
   - {fileID: 6677278958291800659}
+  - {fileID: 812344258}
