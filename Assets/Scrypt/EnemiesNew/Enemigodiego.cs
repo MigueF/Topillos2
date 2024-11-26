@@ -18,6 +18,15 @@ public class Enemigodiego : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
+        if (dir.x > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (dir.x < 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
         if (Vector3.Distance(transform.position, target.position) <= 0.2f)
         {
             GetNextWaypoint();
