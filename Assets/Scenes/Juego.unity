@@ -466,7 +466,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 4
+  m_text: Hielo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: Fuego
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -837,10 +837,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1265094003}
-  - {fileID: 1325364238}
-  - {fileID: 932436645}
-  - {fileID: 1085959802}
+  - {fileID: 1471367791}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -897,7 +894,7 @@ Canvas:
   m_GameObject: {fileID: 222770455}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 10
   m_PixelPerfect: 0
@@ -923,15 +920,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec7460ba786fce8448bc980c79713cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPanel: {fileID: 222770455}
+  menuPanel: {fileID: 1471367790}
   tower1Button: {fileID: 1265094004}
   tower2Button: {fileID: 1325364239}
   tower3Button: {fileID: 932436646}
   tower4Button: {fileID: 1085959803}
   tower1Prefab: {fileID: 8544355937075581708, guid: 66e7e665008a40d4ab05b18e8d7a2ae2, type: 3}
-  tower2Prefab: {fileID: 958360614851665955, guid: 903e2333292de7d44bc15152579cdedc, type: 3}
-  tower3Prefab: {fileID: 6612628867598983466, guid: bbefc6c31c619004d8f0725d6a0dc22c, type: 3}
-  tower4Prefab: {fileID: 2518589539161964572, guid: 39cda4ceb7402044d97cc2946da1403b, type: 3}
+  tower2Prefab: {fileID: 2518589539161964572, guid: 39cda4ceb7402044d97cc2946da1403b, type: 3}
+  tower3Prefab: {fileID: 958360614851665955, guid: 903e2333292de7d44bc15152579cdedc, type: 3}
+  tower4Prefab: {fileID: 6612628867598983466, guid: bbefc6c31c619004d8f0725d6a0dc22c, type: 3}
 --- !u!1001 &301433254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9265,7 +9262,7 @@ GameObject:
   - component: {fileID: 932436647}
   - component: {fileID: 932436646}
   m_Layer: 5
-  m_Name: Torre3
+  m_Name: BotonFuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9278,17 +9275,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932436644}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 193264629}
-  m_Father: {fileID: 222770456}
+  m_Father: {fileID: 1471367791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38, y: -511}
+  m_AnchoredPosition: {x: -126, y: -61}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932436646
@@ -10039,7 +10036,7 @@ GameObject:
   - component: {fileID: 1085959804}
   - component: {fileID: 1085959803}
   m_Layer: 5
-  m_Name: Torre4
+  m_Name: BotonHielo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10052,17 +10049,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085959801}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 106795057}
-  m_Father: {fileID: 222770456}
+  m_Father: {fileID: 1471367791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223, y: -509}
+  m_AnchoredPosition: {x: 128, y: -62}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1085959803
@@ -10563,7 +10560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1201481019
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10958,7 +10955,7 @@ GameObject:
   - component: {fileID: 1265094005}
   - component: {fileID: 1265094004}
   m_Layer: 5
-  m_Name: Torre1
+  m_Name: BotonBallesta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10971,17 +10968,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1265094002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1653112190}
-  m_Father: {fileID: 222770456}
+  m_Father: {fileID: 1471367791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -343, y: -509}
+  m_AnchoredPosition: {x: -127, y: 64}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265094004
@@ -11085,7 +11082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1269803403
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38051,7 +38048,7 @@ GameObject:
   - component: {fileID: 1325364240}
   - component: {fileID: 1325364239}
   m_Layer: 5
-  m_Name: Torre2
+  m_Name: "BotonCa\xF1\xF3n"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38064,17 +38061,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325364237}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1562710135}
-  m_Father: {fileID: 222770456}
+  m_Father: {fileID: 1471367791}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -149, y: -512}
+  m_AnchoredPosition: {x: 128, y: 62}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1325364239
@@ -38373,7 +38370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1369907642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38781,6 +38778,45 @@ Transform:
   - {fileID: 1183096890}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1471367790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1471367791}
+  m_Layer: 5
+  m_Name: Menutorres
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1471367791
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471367790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1265094003}
+  - {fileID: 1325364238}
+  - {fileID: 932436645}
+  - {fileID: 1085959802}
+  m_Father: {fileID: 222770456}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1484239861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39063,9 +39099,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '2
-
-'
+  m_text: "Ca\xF1\xF3n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -39553,7 +39587,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '1
+  m_text: 'Ballesta
 
 '
   m_isRightToLeft: 0
@@ -39953,7 +39987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1786572446
 RectTransform:
   m_ObjectHideFlags: 0

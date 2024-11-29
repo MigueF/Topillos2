@@ -25,8 +25,16 @@ public class TowerMenuManager : MonoBehaviour
     public void OpenMenu(GameObject baseObject)
     {
         selectedBase = baseObject;
+
+        // Convertir la posición del objeto base al espacio de pantalla
+        Vector2 screenPosition = Camera.main.WorldToScreenPoint(baseObject.transform.position);
+
+        // Posicionar el menú relativo al Canvas
+        RectTransform menuRect = menuPanel.GetComponent<RectTransform>();
+        menuRect.position = screenPosition;
+
+        // Activar el menú
         menuPanel.SetActive(true);
-        menuPanel.transform.position = Camera.main.WorldToScreenPoint(baseObject.transform.position); // Ajusta la posición del menú
     }
 
     // Método para colocar una torre
