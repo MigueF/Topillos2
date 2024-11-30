@@ -1693,7 +1693,6 @@ GameObject:
   - component: {fileID: 2689890949509351164}
   - component: {fileID: 2342352024217180626}
   - component: {fileID: 8142277703617866347}
-  - component: {fileID: 2824707225189384764}
   - component: {fileID: 6224357246685284837}
   - component: {fileID: 3405656684135043075}
   m_Layer: 0
@@ -1804,19 +1803,6 @@ MonoBehaviour:
     stoneDamage: 0
     damageOverTimeInterval: 0
     isDamgeStarted: 0
---- !u!114 &2824707225189384764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8610511688901078860}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58eaa3330d3c56c4abf14b311946548d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prize: 0
 --- !u!61 &6224357246685284837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1881,6 +1867,7 @@ MonoBehaviour:
   levelText: {fileID: 65107403651650100}
   upgradePrizeText: {fileID: 1554292643833079465}
   sellPrizeText: {fileID: 6060015013362060672}
+  currentLevel: 0
 --- !u!1 &8919254641445355291
 GameObject:
   m_ObjectHideFlags: 0

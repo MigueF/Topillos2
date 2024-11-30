@@ -1236,7 +1236,6 @@ GameObject:
   - component: {fileID: 5801575562119242163}
   - component: {fileID: 2934665185520898108}
   - component: {fileID: 5176136821085183411}
-  - component: {fileID: 5290327094983917911}
   - component: {fileID: 4507899358515508397}
   - component: {fileID: 6049542958108514082}
   - component: {fileID: 6647409920536763097}
@@ -1348,19 +1347,6 @@ MonoBehaviour:
     stoneDamage: 0
     damageOverTimeInterval: 0
     isDamgeStarted: 0
---- !u!114 &5290327094983917911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6612628867598983466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58eaa3330d3c56c4abf14b311946548d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prize: 500
 --- !u!61 &4507899358515508397
 BoxCollider2D:
   m_ObjectHideFlags: 0
