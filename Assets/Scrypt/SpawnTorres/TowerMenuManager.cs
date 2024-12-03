@@ -50,9 +50,14 @@ public class TowerMenuManager : MonoBehaviour
     {
         if (selectedBase != null)
         {
-            Instantiate(towerPrefab, selectedBase.transform.position, Quaternion.identity); // Instanciar la torre
-            selectedBase = null; // Reiniciar la base seleccionada
-            menuPanel.SetActive(false); // Cerrar el menú
+            // Coloca la torre en la posición de la base seleccionada
+            Instantiate(towerPrefab, selectedBase.transform.position, Quaternion.identity);
+
+            // Marca la base como ocupada
+            selectedBase.GetComponent<BaseClickHandler>().SetOccupied(true);
+
+            // Cierra el menú
+            CloseMenu();
         }
     }
 

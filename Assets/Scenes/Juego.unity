@@ -9690,7 +9690,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 932436647}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 222770460}
+        m_TargetAssemblyTypeName: TowerMenuManager, Assembly-CSharp
+        m_MethodName: PlaceTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 958360614851665955, guid: 903e2333292de7d44bc15152579cdedc, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &932436647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10464,7 +10476,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1085959804}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 222770460}
+        m_TargetAssemblyTypeName: TowerMenuManager, Assembly-CSharp
+        m_MethodName: PlaceTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6612628867598983466, guid: bbefc6c31c619004d8f0725d6a0dc22c, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1085959804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11383,7 +11407,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1265094005}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 222770460}
+        m_TargetAssemblyTypeName: TowerMenuManager, Assembly-CSharp
+        m_MethodName: PlaceTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8544355937075581708, guid: 66e7e665008a40d4ab05b18e8d7a2ae2, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1265094005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38476,7 +38512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1325364240}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 222770460}
+        m_TargetAssemblyTypeName: TowerMenuManager, Assembly-CSharp
+        m_MethodName: PlaceTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2518589539161964572, guid: 39cda4ceb7402044d97cc2946da1403b, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1325364240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41213,7 +41261,7 @@ Canvas:
   m_GameObject: {fileID: 1982014972}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 10
   m_PixelPerfect: 0
