@@ -24,6 +24,14 @@ public class TowerMenuManager : MonoBehaviour
     // Método para abrir el menú en una base específica
     public void OpenMenu(GameObject baseObject)
     {
+        // Si el menú está activo y corresponde a la misma base, ciérralo
+        if (menuPanel.activeSelf && selectedBase == baseObject)
+        {
+            CloseMenu();
+            return;
+        }
+
+
         selectedBase = baseObject;
 
         // Convertir la posición del objeto base al espacio de pantalla
@@ -46,5 +54,12 @@ public class TowerMenuManager : MonoBehaviour
             selectedBase = null; // Reiniciar la base seleccionada
             menuPanel.SetActive(false); // Cerrar el menú
         }
+    }
+
+    public void CloseMenu()
+    {
+        // Desactiva el menú
+        menuPanel.SetActive(false);
+        selectedBase = null;
     }
 }

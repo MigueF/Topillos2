@@ -8612,7 +8612,6 @@ MonoBehaviour:
   - {fileID: 244080177328306800, guid: 267975973ad40134b9cf255b409ec2dc, type: 3}
   - {fileID: 9102859072561685265, guid: fc4dbb1764211364f84bcc9be46e9dac, type: 3}
   - {fileID: 938705037939925126, guid: 3523a64cdf71196489e0d2ff977ecf80, type: 3}
-  - {fileID: 8095145041545277252, guid: ac8f19d973211e84ca25845af1b2fafd, type: 3}
   - {fileID: 3992056797558029935, guid: 2ea65f1c9e6dfbd4eac1520df2f04342, type: 3}
   spawnPoints:
   - {fileID: 1300842287}

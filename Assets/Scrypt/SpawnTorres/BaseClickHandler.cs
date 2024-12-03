@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class BaseClickHandler : MonoBehaviour
 {
-    public TowerMenuManager menuManager; // Referencia al script del menú
+    public TowerMenuManager menuManager; // Referencia al gestor del menú
 
     private void OnMouseDown()
     {
-        // Detecta el clic en esta base y abre el menú
+        // Llama al gestor del menú al hacer clic en la base
         menuManager.OpenMenu(gameObject);
     }
 }
