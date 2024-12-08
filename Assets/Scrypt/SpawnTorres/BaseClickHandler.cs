@@ -2,34 +2,52 @@ using UnityEngine;
 
 public class BaseClickHandler : MonoBehaviour
 {
-    public TowerMenuManager menuManager; // Referencia al gestor del menú
-    public bool isOccupied = false; // Indica si la base ya tiene una torre
+    public TowerMenuManager towerMenuManager; // Referencia al TowerMenuManager
+    public GameObject currentTower; // Torre colocada en esta base
+    public string baseColor; // Color de la base (rojo, azul, etc.)
+    private bool isOccupied = false; // Estado de ocupación de la base
 
-    private void OnMouseDown()
+    void Start()
     {
-        // Solo abre el menú si la base no está ocupada
-        if (!isOccupied)
+        if (towerMenuManager == null)
         {
-            menuManager.OpenMenu(gameObject);
+            towerMenuManager = FindObjectOfType<TowerMenuManager>();
         }
     }
 
-    public void SetOccupied(bool value)
+    void OnMouseDown()
+    {
+        if (!isOccupied)
+        {
+            towerMenuManager.OpenMenu(gameObject);
+        }
+        else
+        {
+            Debug.Log("La base ya está ocupada.");
+        }
+    }
+
+    public void SetOccupied(bool value, GameObject tower = null)
     {
         isOccupied = value;
+        currentTower = tower;
 
-        if (isOccupied)
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider != null)
         {
-            // Desactiva el collider para evitar más interacciones
-            Collider2D collider = GetComponent<Collider2D>();
-            if (collider != null)
-            {
-                collider.enabled = false;
-            }
-            else
-            {
-                Debug.LogWarning("No se encontró un Collider2D en el objeto.");
-            }
+            collider.enabled = !value; // Desactivar el collider si está ocupada
         }
+    }
+
+    public void ClearBase()
+    {
+        SetOccupied(false);
+        Debug.Log("La base ha sido liberada.");
+    }
+
+    // Devuelve la torre colocada en la base
+    public GameObject GetTower()
+    {
+        return currentTower;
     }
 }
