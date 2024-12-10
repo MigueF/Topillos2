@@ -10,6 +10,7 @@ public class Enemigodiego : MonoBehaviour
     private int wavepointIndex = 0;
     public bool isSlowed;
     private Transform[] currentPath;
+    private Animator animator;
 
     void Update()
     {
@@ -20,17 +21,19 @@ public class Enemigodiego : MonoBehaviour
 
         if (dir.x > 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-0.8f, 0.8f, 1);
         }
         else if (dir.x < 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(0.8f, 0.8f, 1);
         }
 
         if (Vector3.Distance(transform.position, target.position) <= 0.2f)
         {
             GetNextWaypoint();
         }
+
+       
     }
 
     void GetNextWaypoint()
