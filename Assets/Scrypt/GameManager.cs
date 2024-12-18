@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
     void Cambiartextovidas()
     {
-        Vidastext.text = "Vidas: " + vidas;
+        Vidastext.text = "" + vidas;
     }
 }
 
