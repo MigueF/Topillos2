@@ -25,8 +25,15 @@ public class TowerMenuManager : MonoBehaviour
         tower3Button.onClick.AddListener(() => PlaceTower(tower3Prefab));
         tower4Button.onClick.AddListener(() => PlaceTower(tower4Prefab));
 
-        rotateForwardButton.onClick.AddListener(() => RotateTowers(1));
-        rotateBackwardButton.onClick.AddListener(() => RotateTowers(-1));
+        rotateForwardButton.onClick.AddListener(() => {
+            OpenColorSelection();
+            RotateTowers(1);
+        });
+
+        rotateBackwardButton.onClick.AddListener(() => {
+            OpenColorSelection();
+            RotateTowers(-1);
+        });
     }
 
     public void OpenMenu(GameObject baseObject)
@@ -103,6 +110,13 @@ public class TowerMenuManager : MonoBehaviour
             {
                 towers.Add(null); // Añadir vacío si no hay torre
             }
+        }
+
+        // Verificar que la lista de torres tenga el mismo tamaño que la lista de bases seleccionadas
+        if (towers.Count != selectedBases.Count)
+        {
+            Debug.LogError("La lista de torres y la lista de bases seleccionadas no tienen el mismo tamaño.");
+            return;
         }
 
         // Rotación de torres
