@@ -98,7 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbccde0186d71db4296fbc7315d4142b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuManager: {fileID: 0}
+  towerMenuManager: {fileID: 0}
+  currentTower: {fileID: 0}
+  baseColor: verde
 --- !u!61 &-3841331711279750832
 BoxCollider2D:
   m_ObjectHideFlags: 0
