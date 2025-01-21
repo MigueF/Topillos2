@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bestiary : MonoBehaviour
 {
     public GameObject[] entries;
+    public GameObject bestiary;
 
     public void EnableEntry(int id)
     {
