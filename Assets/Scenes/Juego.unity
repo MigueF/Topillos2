@@ -488,7 +488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00068665, y: 0}
+  m_AnchoredPosition: {x: 141.13, y: 0}
   m_SizeDelta: {x: 368.27, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &69272220
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nombre de enemigo
+  m_text: Ogre
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -645,8 +645,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "         : 60             : Normal               : 1\n         : None       
-    : None\n\nClassic low health enemy, just farm money of them.\n"
+  m_text: "         : 160             : Lento              : 1\n         : None       
+    : High\n\nHeals close by allies, magic towers such as flamethrowers and ice towers
+    bearly affect them."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1399,7 +1400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &186282555
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3403,8 +3404,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "         : 60             : Normal               : 1\n         : None       
-    : None\n\nClassic low health enemy, just farm money of them.\n"
+  m_text: "         : 120             : Lento              : 1\n         : Low       
+    : None\n\nLow armour soldier, resists some damage from crossbows and cannons.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3672,8 +3673,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "         : 60             : Normal               : 1\n         : None       
-    : None\n\nClassic low health enemy, just farm money of them.\n"
+  m_text: "         : 900             : Very slow               : 3\n         : None       
+    : None\n\nOgres can outlast many hits, try to slow them down while the other
+    towers finish them.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4662,7 +4664,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00068665, y: 0}
+  m_AnchoredPosition: {x: 137.84, y: 0}
   m_SizeDelta: {x: 368.27, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &540485807
@@ -4685,7 +4687,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nombre de enemigo
+  m_text: Angel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11528,7 +11530,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &759861789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13244,7 +13246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &956287000
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14462,7 +14464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00068665, y: 0}
+  m_AnchoredPosition: {x: 123.32, y: 0}
   m_SizeDelta: {x: 368.27, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1019752852
@@ -14485,7 +14487,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nombre de enemigo
+  m_text: Impling
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14904,8 +14906,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "         : 60             : Normal               : 1\n         : None       
-    : None\n\nClassic low health enemy, just farm money of them.\n"
+  m_text: "         : 50             : Fast             : 1\n         : None       
+    : None\n\nThey usually come in large groups, easy to kill, hard to catch.\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -46413,7 +46415,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00068665, y: 0}
+  m_AnchoredPosition: {x: 128.97, y: 0}
   m_SizeDelta: {x: 368.27, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1510311726
@@ -46436,7 +46438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Nombre de enemigo
+  m_text: Soldier
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -47245,8 +47247,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 8.5971985}
-  m_SizeDelta: {x: 206.9522, y: 206.9522}
+  m_AnchoredPosition: {x: 2, y: 24.6}
+  m_SizeDelta: {x: 435, y: 365.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1652216823
 MonoBehaviour:
