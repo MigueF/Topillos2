@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eac4457bb7c4b1840a0d3d6da4852bd8
+guid: 1efc50d9a8e4fd0478caa7df3fc222f1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -124,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ANIMACION OJO_0
+      name: demonio escudio animcion_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e404751c35916fa4ab5b93779b45e6d2
-      internalID: 1886914214
+      spriteID: e3ffa5d870e7d5a4dac642577f2e652b
+      internalID: -1875413897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ANIMACION OJO_1
+      name: demonio escudio animcion_1
       rect:
         serializedVersion: 2
         x: 64
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c8d513745a9da448970c958665ba649
-      internalID: 311513299
+      spriteID: 8adbb62a4c8e9424bafda006876e98f5
+      internalID: -548373517
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ANIMACION OJO_2
+      name: demonio escudio animcion_2
       rect:
         serializedVersion: 2
         x: 128
@@ -192,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ce2eabff5be4c4e9618acb88e3f485
-      internalID: 1777268490
+      spriteID: f0c184eec198dfc47a86d50f26c854bd
+      internalID: 587718406
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ANIMACION OJO_3
+      name: demonio escudio animcion_3
       rect:
         serializedVersion: 2
         x: 192
@@ -213,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ea4912d714c1d34e876083b630088cf
-      internalID: 827890167
+      spriteID: 75a529362b3bbb14c97ef222c3e6538a
+      internalID: 1660870009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ANIMACION OJO_4
+      name: demonio escudio animcion_4
       rect:
         serializedVersion: 2
         x: 256
@@ -234,14 +234,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d24bf37c60e2f994ea1d2d961d250df8
-      internalID: -1080694888
+      spriteID: f1d2428807d262a4d90d28555c3578c0
+      internalID: -1379433833
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ANIMACION OJO_5
+      name: demonio escudio animcion_5
       rect:
         serializedVersion: 2
         x: 320
@@ -255,71 +255,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cd92f6dc47596143ace2dd432defdcb
-      internalID: -46008897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ANIMACION OJO_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 635bc92a2e3ec5444b46ce233271675d
-      internalID: 689010971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ANIMACION OJO_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ac80e5a8a7cf454dac3bb9f053db7b9
-      internalID: 1770256249
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ANIMACION OJO_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 812666b65b4c4cd4ea0d3156f94eb140
-      internalID: 1808071492
+      spriteID: 3d5517549f73ab04b9ad875eabaaff08
+      internalID: -332681933
       vertices: []
       indices: 
       edges: []
@@ -335,15 +272,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ANIMACION OJO_0: 1886914214
-      ANIMACION OJO_1: 311513299
-      ANIMACION OJO_2: 1777268490
-      ANIMACION OJO_3: 827890167
-      ANIMACION OJO_4: -1080694888
-      ANIMACION OJO_5: -46008897
-      ANIMACION OJO_6: 689010971
-      ANIMACION OJO_7: 1770256249
-      ANIMACION OJO_8: 1808071492
+      demonio escudio animcion_0: -1875413897
+      demonio escudio animcion_1: -548373517
+      demonio escudio animcion_2: 587718406
+      demonio escudio animcion_3: 1660870009
+      demonio escudio animcion_4: -1379433833
+      demonio escudio animcion_5: -332681933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
