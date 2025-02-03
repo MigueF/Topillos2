@@ -4,7 +4,6 @@ public class BaseClickHandler : MonoBehaviour
 {
     public TowerMenuManager towerMenuManager; // Referencia al TowerMenuManager
     public GameObject currentTower; // Torre colocada en esta base
-    public string baseColor; // Color de la base (rojo, azul, etc.)
     private bool isOccupied = false; // Estado de ocupación de la base
 
     void Start()
