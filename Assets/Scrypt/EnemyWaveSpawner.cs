@@ -9,13 +9,13 @@ public class EnemyWave
     public int spawnPointIndex;   // Índice del punto de spawn (en la lista de spawners)
     public int enemyCount;        // Cantidad de enemigos de este tipo
     public string pathName;       // Nombre del camino que deben seguir los enemigos
+    
 }
 
 [System.Serializable]
 public class WaveConfig
 {
     public List<EnemyWave> enemiesInWave; // Lista de grupos de enemigos que salen en esta oleada
-    public bool Spawnalavez;          // Determina si los enemigos deben spawnearse en paralelo
 }
 
 public class EnemyWaveSpawner : MonoBehaviour
@@ -77,42 +77,22 @@ public class EnemyWaveSpawner : MonoBehaviour
         {
             WaveConfig currentWave = waves[currentWaveIndex];
 
-            if (currentWave.Spawnalavez)
+            // Iterar sobre cada grupo de enemigos configurado para esta oleada
+            foreach (EnemyWave enemyWave in currentWave.enemiesInWave)
             {
-                // Spawnear enemigos en paralelo
-                List<Coroutine> spawnCoroutines = new List<Coroutine>();
-                foreach (EnemyWave enemyWave in currentWave.enemiesInWave)
+                // Spawnear la cantidad de enemigos especificada de este tipo
+                for (int i = 0; i < enemyWave.enemyCount; i++)
                 {
-                    spawnCoroutines.Add(StartCoroutine(SpawnEnemyGroup(enemyWave)));
-                }
-                // Esperar a que todas las coroutines terminen
-                foreach (Coroutine coroutine in spawnCoroutines)
-                {
-                    yield return coroutine;
-                }
-            }
-            else
-            {
-                // Spawnear enemigos en serie
-                foreach (EnemyWave enemyWave in currentWave.enemiesInWave)
-                {
-                    yield return StartCoroutine(SpawnEnemyGroup(enemyWave));
+                    SpawnEnemy(enemyWave.enemyType, enemyWave.spawnPointIndex, enemyWave.pathName);
+
+                    // Esperar antes de spawnear el siguiente enemigo del grupo
+                    yield return new WaitForSeconds(timeBetweenSpawns);
                 }
             }
 
             // Esperar el tiempo especificado antes de la siguiente oleada
             yield return new WaitForSeconds(timeBetweenWaves);
             currentWaveIndex++;
-        }
-    }
-
-    // Coroutine para spawnear un grupo de enemigos
-    IEnumerator SpawnEnemyGroup(EnemyWave enemyWave)
-    {
-        for (int i = 0; i < enemyWave.enemyCount; i++)
-        {
-            SpawnEnemy(enemyWave.enemyType, enemyWave.spawnPointIndex, enemyWave.pathName);
-            yield return new WaitForSeconds(timeBetweenSpawns);
         }
     }
 
