@@ -1332,7 +1332,7 @@ MonoBehaviour:
   towerType: 3
   projectilePrefab: {fileID: 6374019606882183484, guid: cc64fe1904d09cd44bb0d4fff7787317, type: 3}
   firePoint: {fileID: 5801575562119242163}
-  attackRange: 3
+  attackRange: 4.4
   attackRate: 2.5
   damage: 5
   circleColour: 0.03
