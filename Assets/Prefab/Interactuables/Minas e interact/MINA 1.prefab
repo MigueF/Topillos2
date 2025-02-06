@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7745469779843352140}
   - component: {fileID: 1706542740857725975}
   - component: {fileID: 119354240203840567}
+  - component: {fileID: 2973346440515523780}
   m_Layer: 0
   m_Name: MINA 1
   m_TagString: Untagged
@@ -106,3 +107,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2973346440515523780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5985076998558886460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b990aaa0616d1964b80a164378a64edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 500
