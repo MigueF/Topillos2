@@ -9377,15 +9377,15 @@ MonoBehaviour:
   - {fileID: 8919154352166584542, guid: f9b2c1e5ba4286d499336e6027c4f431, type: 3}
   - {fileID: 244080177328306800, guid: 267975973ad40134b9cf255b409ec2dc, type: 3}
   - {fileID: 9102859072561685265, guid: fc4dbb1764211364f84bcc9be46e9dac, type: 3}
-  - {fileID: 938705037939925126, guid: 3523a64cdf71196489e0d2ff977ecf80, type: 3}
-  - {fileID: 3992056797558029935, guid: 2ea65f1c9e6dfbd4eac1520df2f04342, type: 3}
-  - {fileID: 4918382789337473547, guid: 873256cbd86588045b6a636fdffc60a3, type: 3}
   - {fileID: 531815576266871396, guid: da368cec0629f33408509e56a0bf56d8, type: 3}
-  - {fileID: 2490918714681854218, guid: 00a9db55f74a5f2459309408d29546ee, type: 3}
-  - {fileID: 1597907921922703937, guid: 4fd7b038a22ba5748b601c36401077b2, type: 3}
-  - {fileID: 767210678183990580, guid: 7a8829eb50be3264d80aa070a4bc2d0b, type: 3}
+  - {fileID: 3992056797558029935, guid: 2ea65f1c9e6dfbd4eac1520df2f04342, type: 3}
   - {fileID: 1147515571102111373, guid: 57af05bfe272f3f48a9e33e10d4cea80, type: 3}
+  - {fileID: 767210678183990580, guid: 7a8829eb50be3264d80aa070a4bc2d0b, type: 3}
+  - {fileID: 1597907921922703937, guid: 4fd7b038a22ba5748b601c36401077b2, type: 3}
+  - {fileID: 4918382789337473547, guid: 873256cbd86588045b6a636fdffc60a3, type: 3}
+  - {fileID: 938705037939925126, guid: 3523a64cdf71196489e0d2ff977ecf80, type: 3}
   - {fileID: 8095145041545277252, guid: ac8f19d973211e84ca25845af1b2fafd, type: 3}
+  - {fileID: 2490918714681854218, guid: 00a9db55f74a5f2459309408d29546ee, type: 3}
   spawnPoints:
   - {fileID: 1300842287}
   - {fileID: 490337102}
@@ -9903,6 +9903,322 @@ MonoBehaviour:
     - enemyType: 7
       spawnPointIndex: 3
       enemyCount: 1
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 8
+      spawnPointIndex: 0
+      enemyCount: 5
+      pathName: Waypoints1
+    - enemyType: 8
+      spawnPointIndex: 2
+      enemyCount: 5
+      pathName: Waypoints3
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 5
+      spawnPointIndex: 0
+      enemyCount: 10
+      pathName: Waypoints1
+    - enemyType: 8
+      spawnPointIndex: 1
+      enemyCount: 10
+      pathName: Waypoints2
+    - enemyType: 5
+      spawnPointIndex: 2
+      enemyCount: 10
+      pathName: Waypoints3
+    - enemyType: 8
+      spawnPointIndex: 3
+      enemyCount: 10
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 9
+      spawnPointIndex: 2
+      enemyCount: 10
+      pathName: Waypoints3
+    - enemyType: 9
+      spawnPointIndex: 3
+      enemyCount: 10
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 7
+      spawnPointIndex: 0
+      enemyCount: 1
+      pathName: Waypoints1
+    - enemyType: 8
+      spawnPointIndex: 0
+      enemyCount: 10
+      pathName: Waypoints1
+    - enemyType: 9
+      spawnPointIndex: 1
+      enemyCount: 20
+      pathName: Waypoints2
+    - enemyType: 7
+      spawnPointIndex: 2
+      enemyCount: 1
+      pathName: Waypoints3
+    - enemyType: 8
+      spawnPointIndex: 2
+      enemyCount: 10
+      pathName: Waypoints3
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 6
+      spawnPointIndex: 0
+      enemyCount: 10
+      pathName: Waypoints1
+    - enemyType: 6
+      spawnPointIndex: 1
+      enemyCount: 10
+      pathName: Waypoints2
+    - enemyType: 6
+      spawnPointIndex: 2
+      enemyCount: 10
+      pathName: Waypoints3
+    - enemyType: 6
+      spawnPointIndex: 3
+      enemyCount: 10
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 9
+      spawnPointIndex: 0
+      enemyCount: 15
+      pathName: Waypoints1
+    - enemyType: 9
+      spawnPointIndex: 1
+      enemyCount: 15
+      pathName: Waypoints2
+    - enemyType: 9
+      spawnPointIndex: 2
+      enemyCount: 15
+      pathName: Waypoints3
+    - enemyType: 9
+      spawnPointIndex: 3
+      enemyCount: 15
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 10
+      spawnPointIndex: 0
+      enemyCount: 4
+      pathName: Waypoints1
+    - enemyType: 10
+      spawnPointIndex: 1
+      enemyCount: 4
+      pathName: Waypoints2
+    - enemyType: 10
+      spawnPointIndex: 2
+      enemyCount: 4
+      pathName: Waypoints3
+    - enemyType: 10
+      spawnPointIndex: 3
+      enemyCount: 4
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 4
+      spawnPointIndex: 0
+      enemyCount: 3
+      pathName: Waypoints1
+    - enemyType: 3
+      spawnPointIndex: 0
+      enemyCount: 5
+      pathName: Waypoints1
+    - enemyType: 10
+      spawnPointIndex: 1
+      enemyCount: 5
+      pathName: Waypoints2
+    - enemyType: 4
+      spawnPointIndex: 2
+      enemyCount: 3
+      pathName: Waypoints3
+    - enemyType: 10
+      spawnPointIndex: 3
+      enemyCount: 4
+      pathName: Waypoints4
+    - enemyType: 10
+      spawnPointIndex: 3
+      enemyCount: 4
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 4
+      spawnPointIndex: 0
+      enemyCount: 3
+      pathName: Waypoints1
+    - enemyType: 3
+      spawnPointIndex: 0
+      enemyCount: 5
+      pathName: Waypoints1
+    - enemyType: 10
+      spawnPointIndex: 1
+      enemyCount: 5
+      pathName: Waypoints2
+    - enemyType: 4
+      spawnPointIndex: 2
+      enemyCount: 3
+      pathName: Waypoints3
+    - enemyType: 10
+      spawnPointIndex: 3
+      enemyCount: 4
+      pathName: Waypoints4
+    - enemyType: 10
+      spawnPointIndex: 3
+      enemyCount: 4
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 5
+      spawnPointIndex: 0
+      enemyCount: 20
+      pathName: Waypoints1
+    - enemyType: 8
+      spawnPointIndex: 1
+      enemyCount: 20
+      pathName: Waypoints2
+    - enemyType: 5
+      spawnPointIndex: 2
+      enemyCount: 20
+      pathName: Waypoints3
+    - enemyType: 8
+      spawnPointIndex: 3
+      enemyCount: 20
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 8
+      spawnPointIndex: 0
+      enemyCount: 20
+      pathName: Waypoints1
+    - enemyType: 5
+      spawnPointIndex: 1
+      enemyCount: 20
+      pathName: Waypoints2
+    - enemyType: 8
+      spawnPointIndex: 2
+      enemyCount: 20
+      pathName: Waypoints3
+    - enemyType: 5
+      spawnPointIndex: 3
+      enemyCount: 20
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 7
+      spawnPointIndex: 0
+      enemyCount: 1
+      pathName: Waypoints1
+    - enemyType: 10
+      spawnPointIndex: 0
+      enemyCount: 5
+      pathName: Waypoints1
+    - enemyType: 7
+      spawnPointIndex: 1
+      enemyCount: 1
+      pathName: Waypoints2
+    - enemyType: 10
+      spawnPointIndex: 1
+      enemyCount: 5
+      pathName: Waypoints2
+    - enemyType: 5
+      spawnPointIndex: 2
+      enemyCount: 30
+      pathName: Waypoints3
+    - enemyType: 7
+      spawnPointIndex: 3
+      enemyCount: 1
+      pathName: Waypoints4
+    - enemyType: 10
+      spawnPointIndex: 3
+      enemyCount: 5
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 7
+      spawnPointIndex: 0
+      enemyCount: 1
+      pathName: Waypoints1
+    - enemyType: 10
+      spawnPointIndex: 0
+      enemyCount: 5
+      pathName: Waypoints1
+    - enemyType: 7
+      spawnPointIndex: 1
+      enemyCount: 1
+      pathName: Waypoints2
+    - enemyType: 10
+      spawnPointIndex: 1
+      enemyCount: 5
+      pathName: Waypoints2
+    - enemyType: 9
+      spawnPointIndex: 2
+      enemyCount: 30
+      pathName: Waypoints3
+    - enemyType: 7
+      spawnPointIndex: 3
+      enemyCount: 1
+      pathName: Waypoints4
+    - enemyType: 10
+      spawnPointIndex: 3
+      enemyCount: 5
+      pathName: Waypoints4
+    Spawnalavez: 1
+  - enemiesInWave:
+    - enemyType: 5
+      spawnPointIndex: 0
+      enemyCount: 40
+      pathName: Waypoints1
+    - enemyType: 3
+      spawnPointIndex: 0
+      enemyCount: 10
+      pathName: Waypoints1
+    - enemyType: 9
+      spawnPointIndex: 0
+      enemyCount: 30
+      pathName: Waypoints1
+    - enemyType: 5
+      spawnPointIndex: 1
+      enemyCount: 40
+      pathName: Waypoints2
+    - enemyType: 3
+      spawnPointIndex: 1
+      enemyCount: 10
+      pathName: Waypoints2
+    - enemyType: 9
+      spawnPointIndex: 1
+      enemyCount: 30
+      pathName: Waypoints2
+    - enemyType: 11
+      spawnPointIndex: 2
+      enemyCount: 1
+      pathName: Waypoints3
+    - enemyType: 5
+      spawnPointIndex: 2
+      enemyCount: 40
+      pathName: Waypoints3
+    - enemyType: 3
+      spawnPointIndex: 2
+      enemyCount: 10
+      pathName: Waypoints3
+    - enemyType: 6
+      spawnPointIndex: 3
+      enemyCount: 25
+      pathName: Waypoints4
+    - enemyType: 5
+      spawnPointIndex: 3
+      enemyCount: 40
+      pathName: Waypoints4
+    - enemyType: 3
+      spawnPointIndex: 3
+      enemyCount: 10
+      pathName: Waypoints4
+    - enemyType: 9
+      spawnPointIndex: 3
+      enemyCount: 30
       pathName: Waypoints4
     Spawnalavez: 1
   timeBetweenWaves: 7
