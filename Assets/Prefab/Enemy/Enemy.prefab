@@ -103,6 +103,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 60
   currentHealth: 0
+  physicalArmor: 100
+  magicalArmor: 100
 --- !u!114 &-5121287163443331967
 MonoBehaviour:
   m_ObjectHideFlags: 0

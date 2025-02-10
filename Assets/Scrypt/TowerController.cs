@@ -75,6 +75,7 @@ public class TowerController : MonoBehaviour
         {
             projectileController.Seek(target.transform);
             projectileController.damage = damage;
+            projectileController.damageType = towerType; // Pasar el tipo de daño al proyectil
         }
     }
 
@@ -179,7 +180,7 @@ public class TowerController : MonoBehaviour
                 EnemyHealth enemyHealth = collider.GetComponent<EnemyHealth>();
                 if (enemyHealth != null)
                 {
-                    enemyHealth.TakeDamage(fireVariables.fireDamage);
+                    enemyHealth.TakeDamage(fireVariables.fireDamage, TowerType.Fire);
                     Debug.Log("Damaged: " + enemyHealth.currentHealth);
                 }
             }
@@ -202,7 +203,7 @@ public class TowerController : MonoBehaviour
                 EnemyHealth enemyHealth = collider.GetComponent<EnemyHealth>();
                 if (enemyHealth != null)
                 {
-                    enemyHealth.TakeDamage(stoneVariables.stoneDamage);
+                    enemyHealth.TakeDamage(stoneVariables.stoneDamage, TowerType.Stone);
                     Debug.Log("Damaged: " + enemyHealth.currentHealth);
                 }
             }
@@ -217,7 +218,7 @@ public class TowerController : MonoBehaviour
     }
     public void RangeCircle()
     {
-        if(rangeCircle != null)
+        if (rangeCircle != null)
         {
             rangeCircle.transform.localScale = new Vector2(attackRange + attackRange, attackRange + attackRange);
             SpriteRenderer spriteRenderer = rangeCircle.GetComponent<SpriteRenderer>();

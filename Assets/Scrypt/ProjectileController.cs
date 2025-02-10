@@ -1,49 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
     private Transform target;
-    public float speed = 10f;
-    public int damage = 10;
+    public int damage;
+    public TowerController.TowerType damageType; // Tipo de daño
+    public float speed = 10f; // Definir la variable speed
 
-    public void Seek(Transform target)
+    public void Seek(Transform _target)
     {
-        this.target = target;
+        target = _target;
     }
 
     void Update()
     {
         if (target == null)
         {
-            Destroy(gameObject); // If the target is lost, destroy the projectile
+            Destroy(gameObject);
             return;
         }
 
-        Vector2 direction = target.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = rotation;
-
+        Vector3 dir = target.position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
-        transform.Translate(direction.normalized * distanceThisFrame, Space.World);
 
-        // Check if the projectile is close enough to the target
-        if (direction.magnitude <= distanceThisFrame)
+        if (dir.magnitude <= distanceThisFrame)
         {
             HitTarget();
+            return;
         }
+
+        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+        transform.LookAt(target);
     }
 
     void HitTarget()
     {
-        // Do damage to the target or whatever action you want when the projectile hits
-        Destroy(gameObject);
         EnemyHealth enemyHealth = target.GetComponent<EnemyHealth>();
         if (enemyHealth != null)
         {
-            enemyHealth.TakeDamage(damage);
+            enemyHealth.TakeDamage(damage, damageType); // Pasar el tipo de daño
         }
+        Destroy(gameObject);
     }
 }
+

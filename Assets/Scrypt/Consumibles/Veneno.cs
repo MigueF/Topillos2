@@ -36,6 +36,11 @@ public class Veneno : MonoBehaviour
             audioSource.PlayOneShot(activationSound);
         }
         yield return new WaitForSeconds(animationTime);
+    }
+
+    // Método que se llamará al final de la animación
+    public void OnAnimationEnd()
+    {
         GameObject pool = Instantiate(poisonPoolPrefab, transform.position, Quaternion.identity);
         pool.AddComponent<PoisonEffect>().Initialize(poisonDuration, poisonDamage);
         Destroy(gameObject); // Destruye la trampa después de activarse
@@ -64,8 +69,12 @@ public class PoisonEffect : MonoBehaviour
             {
                 if (enemy.CompareTag("Enemy"))
                 {
-                    // Aquí puedes añadir código para reducir la vida del enemigo
-                    Debug.Log("Enemigo envenenado con " + damage + " de daño");
+                    EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+                    if (enemyHealth != null)
+                    {
+                        enemyHealth.TakeDamage(Mathf.RoundToInt(damage), TowerController.TowerType.Fire); // Pasar el tipo de daño mágico
+                        Debug.Log("Enemigo envenenado con " + damage + " de daño");
+                    }
                 }
             }
             elapsedTime += 1f;
@@ -74,3 +83,4 @@ public class PoisonEffect : MonoBehaviour
         Destroy(gameObject);
     }
 }
+

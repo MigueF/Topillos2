@@ -21,7 +21,7 @@ public class Mine : MonoBehaviour
             EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
-                enemyHealth.TakeDamage(damage); // Aplica el daño al enemigo
+                enemyHealth.TakeDamage(damage, TowerController.TowerType.Stone); // Aplica el daño físico al enemigo
             }
 
             StartCoroutine(Explode()); // Inicia la explosión
