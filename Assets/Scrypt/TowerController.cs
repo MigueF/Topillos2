@@ -246,3 +246,4 @@ public class TowerController : MonoBehaviour
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 5f);
     }
 }
+

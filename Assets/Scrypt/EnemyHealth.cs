@@ -9,9 +9,14 @@ public class EnemyHealth : MonoBehaviour
     public float physicalArmor = 0f; // Armadura física en porcentaje
     public float magicalArmor = 0f; // Armadura mágica en porcentaje
 
+    private Animator animator; // Referencia al Animator
+    private Enemigodiego enemyMovement; // Referencia al componente de movimiento
+
     void Start()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>(); // Obtener el componente Animator
+        enemyMovement = GetComponent<Enemigodiego>(); // Obtener el componente de movimiento
     }
 
     public void TakeDamage(int damageAmount, TowerController.TowerType damageType)
@@ -41,7 +46,20 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        // Perform death-related actions here, such as playing death animation, adding score, etc.
-        Destroy(gameObject);
+        // Activar la animación de muerte
+        if (animator != null)
+        {
+            animator.SetTrigger("Die");
+        }
+
+        // Desactivar el movimiento del enemigo
+        if (enemyMovement != null)
+        {
+            enemyMovement.enabled = false;
+        }
+
+        // Destruir el objeto después de un pequeño retraso para permitir que la animación se reproduzca
+        Destroy(gameObject, 1f);
     }
 }
+
