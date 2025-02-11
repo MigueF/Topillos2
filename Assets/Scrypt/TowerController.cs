@@ -13,6 +13,7 @@ public class TowerController : MonoBehaviour
     public float attackRate = 2f; // Attacks per second
     public int damage;
     public float circleColour;
+    public int price; // Precio de la torre
 
     private float nextAttackTime = 0f;
     private GameObject target;

@@ -45,11 +45,11 @@ public class CoinManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-    public void AddCoins(int ammount)
+    public void AddCoins(int amount)
     {
-        currentCoins += ammount;
+        currentCoins += amount;
         UpdateUI();
     }
     public bool SpendCoins(int amount)
@@ -86,4 +86,33 @@ public class CoinManager : MonoBehaviour
             warningText.text = ""; // Clear the warning text
         }
     }
+
+    public bool CanAfford(int amount)
+    {
+        return currentCoins >= amount;
+    }
+
+    public bool PurchaseTower(TowerController.TowerType towerType)
+    {
+        int price = 0;
+        switch (towerType)
+        {
+            case TowerController.TowerType.Archer:
+                price = archer;
+                break;
+            case TowerController.TowerType.Stone:
+                price = stone;
+                break;
+            case TowerController.TowerType.Fire:
+                price = fire;
+                break;
+            case TowerController.TowerType.Ice:
+                price = ice;
+                break;
+        }
+
+        return SpendCoins(price);
+    }
 }
+
+
