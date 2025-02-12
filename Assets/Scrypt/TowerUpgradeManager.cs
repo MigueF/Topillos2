@@ -18,6 +18,7 @@ public class TowerUpgradeManager : MonoBehaviour
     public int currentLevel;
     private int currentUpgradePrize;
     private int currentsellPrize;
+    private BaseClickHandler baseClickHandler; // Referencia al BaseClickHandler
 
     void Start()
     {
@@ -30,6 +31,7 @@ public class TowerUpgradeManager : MonoBehaviour
         sellPrizeText.text = "Prize: " + currentsellPrize.ToString();
         towerController = gameObject.GetComponent<TowerController>();
         towerAnimator = gameObject.GetComponent<Animator>(); // Obtener el componente Animator
+        baseClickHandler = GetComponentInParent<BaseClickHandler>(); // Obtener el componente BaseClickHandler
         UpdateTowerAnimation(); // Actualizar la animación inicial
 
         if (touchButton != null)
@@ -120,6 +122,11 @@ public class TowerUpgradeManager : MonoBehaviour
     {
         CoinManager.instance.AddCoins(currentsellPrize);
         sellPrizeText.text = "Prize: " + currentsellPrize.ToString();
+        if (baseClickHandler != null)
+        {
+            Debug.Log("Llamando a ClearBase en BaseClickHandler");
+            baseClickHandler.ClearBase(); // Liberar la base
+        }
         Destroy(gameObject);
     }
 
@@ -145,3 +152,5 @@ public class TowerUpgradeManager : MonoBehaviour
         }
     }
 }
+
+
