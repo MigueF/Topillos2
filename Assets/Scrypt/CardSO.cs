@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
-public class Cards : ScriptableObject
+public class CardSO : ScriptableObject
 {
     public Sprite cardImage; // The image of the card
 
