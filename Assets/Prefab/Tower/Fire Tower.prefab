@@ -468,7 +468,7 @@ MonoBehaviour:
   attackRate: 1
   damage: 30
   circleColour: 0.03
-  price: 100
+  price: 200
   fireVariables:
     fireDamage: 10
     damageOverTimeInterval: 0.5
