@@ -117,6 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 400
   currentHealth: 0
+  physicalArmor: 0
+  magicalArmor: 0
 --- !u!61 &1877671624387657795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,7 +151,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.07339874, y: -0.11009836}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -160,7 +162,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 0.3433534, y: 0.25527447}
   m_EdgeRadius: 0
 --- !u!50 &-1701438408407382948
 Rigidbody2D:

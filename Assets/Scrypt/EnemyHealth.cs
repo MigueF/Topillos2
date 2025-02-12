@@ -11,12 +11,14 @@ public class EnemyHealth : MonoBehaviour
 
     private Animator animator; // Referencia al Animator
     private Enemigodiego enemyMovement; // Referencia al componente de movimiento
+    private SpriteRenderer spriteRenderer; // Referencia al SpriteRenderer
 
     void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponent<Animator>(); // Obtener el componente Animator
         enemyMovement = GetComponent<Enemigodiego>(); // Obtener el componente de movimiento
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Obtener el componente SpriteRenderer
     }
 
     public void TakeDamage(int damageAmount, TowerController.TowerType damageType)
@@ -36,6 +38,9 @@ public class EnemyHealth : MonoBehaviour
 
         currentHealth -= Mathf.RoundToInt(damageAfterArmor);
         CoinManager.instance.AddCoins(5);
+
+        // Iniciar el efecto de flash
+        StartCoroutine(FlashRed());
 
         if (currentHealth <= 0)
         {
@@ -60,6 +65,18 @@ public class EnemyHealth : MonoBehaviour
 
         // Destruir el objeto después de un pequeño retraso para permitir que la animación se reproduzca
         Destroy(gameObject, 1f);
+    }
+
+    // Coroutine para manejar el efecto de flash
+    IEnumerator FlashRed()
+    {
+        if (spriteRenderer != null)
+        {
+            Color originalColor = spriteRenderer.color;
+            spriteRenderer.color = Color.red; // Cambiar el color a rojo
+            yield return new WaitForSeconds(0.1f); // Esperar un breve período de tiempo
+            spriteRenderer.color = originalColor; // Volver al color original
+        }
     }
 }
 
