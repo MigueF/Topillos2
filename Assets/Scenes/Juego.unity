@@ -6695,7 +6695,7 @@ MonoBehaviour:
   archer: 150
   stone: 250
   fire: 400
-  ice: 500
+  ice: 100
   upgradeStartPrize: 400
   upgradePlusPrize: 100
   sellStartPrize: 100
