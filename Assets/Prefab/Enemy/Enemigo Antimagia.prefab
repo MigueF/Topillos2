@@ -104,7 +104,7 @@ MonoBehaviour:
   maxHealth: 250
   currentHealth: 0
   physicalArmor: 0
-  magicalArmor: 0
+  magicalArmor: 10
 --- !u!114 &1558776625434488844
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1342,7 +1342,7 @@ MonoBehaviour:
     damageOverTimeInterval: 0
     isDamgeStarted: 0
   iceVariables:
-    iceSlowRate: 1
+    iceSlowRate: 8
     isSlowed: 0
   stoneVariables:
     stoneDamage: 0

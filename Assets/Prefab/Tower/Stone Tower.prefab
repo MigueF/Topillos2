@@ -675,7 +675,7 @@ MonoBehaviour:
   firePoint: {fileID: 7212111232991663113}
   attackRange: 5
   attackRate: 1.5
-  damage: 20
+  damage: 15
   circleColour: 0.03
   price: 100
   fireVariables:

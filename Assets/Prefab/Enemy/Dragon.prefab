@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f03a0e0e2ee49445bcca2e75c10d923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 3.1
   isSlowed: 0
 --- !u!114 &-566450686580209419
 MonoBehaviour:
@@ -118,7 +118,7 @@ MonoBehaviour:
   maxHealth: 400
   currentHealth: 0
   physicalArmor: 0
-  magicalArmor: 0
+  magicalArmor: 5
 --- !u!61 &1877671624387657795
 BoxCollider2D:
   m_ObjectHideFlags: 0

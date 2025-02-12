@@ -4313,7 +4313,7 @@ Transform:
   m_GameObject: {fileID: 314196328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.77, y: -11.46, z: 0}
+  m_LocalPosition: {x: 10.9, y: -11.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5605,7 +5605,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3345448887826747171, guid: 7135ae038b9533243b72530842b4b752, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.05
+      value: 24.96
       objectReference: {fileID: 0}
     - target: {fileID: 3345448887826747171, guid: 7135ae038b9533243b72530842b4b752, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6692,14 +6692,14 @@ MonoBehaviour:
   currentCoins: 0
   coinText: {fileID: 908859028}
   warningText: {fileID: 714113319}
-  archer: 150
-  stone: 250
-  fire: 400
-  ice: 100
-  upgradeStartPrize: 400
-  upgradePlusPrize: 100
-  sellStartPrize: 100
-  sellPlusPrize: 50
+  archer: 50
+  stone: 100
+  fire: 200
+  ice: 150
+  upgradeStartPrize: 500
+  upgradePlusPrize: 1000
+  sellStartPrize: 200
+  sellPlusPrize: 250
 --- !u!4 &503680809
 Transform:
   m_ObjectHideFlags: 0
@@ -9545,7 +9545,7 @@ MonoBehaviour:
       enemyCount: 30
       pathName: Waypoints4
     Spawnalavez: 1
-  timeBetweenWaves: 7
+  timeBetweenWaves: 12
   timeBetweenSpawns: 1
   currentWaveIndex: 0
 --- !u!1 &802597788
@@ -9918,7 +9918,7 @@ Transform:
   m_GameObject: {fileID: 836514817}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.32, y: -5.59, z: 0}
+  m_LocalPosition: {x: 16.32, y: -5.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26984,11 +26984,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3345448887826747171, guid: 7135ae038b9533243b72530842b4b752, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.79
+      value: 7.62
       objectReference: {fileID: 0}
     - target: {fileID: 3345448887826747171, guid: 7135ae038b9533243b72530842b4b752, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.47
+      value: 7.33
       objectReference: {fileID: 0}
     - target: {fileID: 3345448887826747171, guid: 7135ae038b9533243b72530842b4b752, type: 3}
       propertyPath: m_LocalPosition.z

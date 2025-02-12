@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 120
   currentHealth: 0
-  physicalArmor: 0
+  physicalArmor: 3
   magicalArmor: 0
 --- !u!50 &-1585195845446547172
 Rigidbody2D:
