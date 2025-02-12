@@ -24,10 +24,10 @@ public class TowerMenuManager : MonoBehaviour
         rotateForwardButton.onClick.AddListener(() => RotateTowers(1));
         rotateBackwardButton.onClick.AddListener(() => RotateTowers(-1));
 
-        tower1Button.onClick.AddListener(() => PlaceTower(tower1Prefab));
-        tower2Button.onClick.AddListener(() => PlaceTower(tower2Prefab));
-        tower3Button.onClick.AddListener(() => PlaceTower(tower3Prefab));
-        tower4Button.onClick.AddListener(() => PlaceTower(tower4Prefab));
+        tower1Button.onClick.AddListener(() => TryPlaceTower(tower1Prefab, TowerController.TowerType.Archer));
+        tower2Button.onClick.AddListener(() => TryPlaceTower(tower2Prefab, TowerController.TowerType.Stone));
+        tower3Button.onClick.AddListener(() => TryPlaceTower(tower3Prefab, TowerController.TowerType.Fire));
+        tower4Button.onClick.AddListener(() => TryPlaceTower(tower4Prefab, TowerController.TowerType.Ice));
     }
 
     public void OpenMenu(GameObject baseObject)
@@ -42,6 +42,18 @@ public class TowerMenuManager : MonoBehaviour
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(baseObject.transform.position);
         menuPanel.GetComponent<RectTransform>().position = screenPosition;
         menuPanel.SetActive(true);
+    }
+
+    public void TryPlaceTower(GameObject towerPrefab, TowerController.TowerType towerType)
+    {
+        if (CoinManager.instance.PurchaseTower(towerType))
+        {
+            PlaceTower(towerPrefab);
+        }
+        else
+        {
+            Debug.Log("Not enough coins to place this tower!");
+        }
     }
 
     public void PlaceTower(GameObject towerPrefab)
@@ -130,5 +142,5 @@ public class TowerMenuManager : MonoBehaviour
             }
         }
     }
-
 }
+
