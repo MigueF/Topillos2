@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8342546ec2387f847b99e6852b0cb1da, type: 3}
-  m_Name: Money500
+  m_Name: FuerzaVital
   m_EditorClassIdentifier: 
-  cardImage: {fileID: 21300000, guid: 6112ba9a3ba93a34d9a2734a64419a54, type: 3}
-  cardText: +500 Coins
-  effectType: 0
-  effectValue: 500
+  cardImage: {fileID: 21300000, guid: 9cdd83fa91b4800419f853d1dde40000, type: 3}
+  cardText: +5 Vidas
+  effectType: 1
+  effectValue: 5
   isUnique: 0
   unlockLevel: 0

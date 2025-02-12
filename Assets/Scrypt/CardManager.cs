@@ -23,6 +23,11 @@ public class CardManager : MonoBehaviour
 
     List<CardSO> alreadySelectedCards = new List<CardSO>();
 
+    void Start()
+    {
+        RandomizeNewCards();
+    }
+
 
     void RandomizeNewCards()
     {
@@ -32,7 +37,7 @@ public class CardManager : MonoBehaviour
 
         List<CardSO> randomizedCards = new List<CardSO>();
 
-        List<CardSO> availableCards = new List<CardSO>();
+        List<CardSO> availableCards = new List<CardSO>(deck);
         availableCards.RemoveAll(card =>
             card.isUnique && alreadySelectedCards.Contains(card) 
             // || card.unlockLevel > GameManager.Instance.GetCurrentLevel()
@@ -58,11 +63,11 @@ public class CardManager : MonoBehaviour
 
     }
 
-    GameObject InstantiateCard(CardSO cards, Transform position)
+    GameObject InstantiateCard(CardSO card, Transform position)
     {
         GameObject cardGO = Instantiate(cardPrefab, position.position, Quaternion.identity, position);
-        Card card = cardGO.GetComponent<Card>();
-        card.Setup(CardSO);
+        Card cardComponent = cardGO.GetComponent<Card>();
+        cardComponent.Setup(card);
         return cardGO;
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -13,16 +11,19 @@ public class CardSO : ScriptableObject
     public CardEffect effectType; // The effect
 
     public float effectValue; // The value of the effect
-    
+
     public bool isUnique; // If unique, the card will not be randomized again if it's already selected.
 
     public int unlockLevel;
 
 }
 
-public enum CardEffect 
-{ 
-    MoneyIncrease
+public enum CardEffect
+{
+    MoneyIncrease,
+    HealthIncrease,
+    DamageIncrease
+
 
 
 
