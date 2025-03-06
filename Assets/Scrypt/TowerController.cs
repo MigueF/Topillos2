@@ -70,7 +70,7 @@ public class TowerController : MonoBehaviour
 
     void Shoot(GameObject target)
     {
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, transform.rotation);
         ProjectileController projectileController = projectile.GetComponent<ProjectileController>();
         if (projectileController != null)
         {

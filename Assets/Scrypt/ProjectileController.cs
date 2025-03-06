@@ -6,6 +6,7 @@ public class ProjectileController : MonoBehaviour
     public int damage;
     public TowerController.TowerType damageType; // Tipo de daño
     public float speed = 10f; // Definir la variable speed
+    public float threshold = 0.1f;  //Distancia a la que se considera que la flecha ha impactado
 
     public void Seek(Transform _target)
     {
@@ -29,8 +30,9 @@ public class ProjectileController : MonoBehaviour
             return;
         }
 
+        transform.rotation = Quaternion.LookRotation(dir);
+        //transform.LookAt(target);
         transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-        transform.LookAt(target);
     }
 
     void HitTarget()

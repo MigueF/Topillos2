@@ -2274,7 +2274,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: cef80a64cc9512e449cd6745ce9b6c6e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ecba532455510d149b43d5b915bf80b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2298,7 +2298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerType: 0
-  projectilePrefab: {fileID: 3209625405227566526, guid: 6e580cc0c2c613949b0d267663519c59, type: 3}
+  projectilePrefab: {fileID: 6892097843875060291, guid: 2445769e9a955364e9a1af587578353f, type: 3}
   firePoint: {fileID: 6419592303288502545}
   attackRange: 5.5
   attackRate: 2
@@ -2351,8 +2351,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.92, y: 1.92}
+    pivot: {x: 0.4540863, y: 0.5459137}
+    oldSize: {x: 2, y: 2}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
